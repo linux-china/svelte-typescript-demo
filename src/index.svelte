@@ -1,7 +1,13 @@
-<script lang="ts">
-  const a: string = "Svelte",
-    b: string = "Typescript",
-    c: string = "Rollup";
+<script lang="ts" type="typescript">
+  let tuple1: [string,string,string] = ["Svelte","Typescript","Rollup"]
+  let a: string = "Svelte";
+  let b: string = "Typescript";
+  let  c: string = "Rollup";
+
+  function click1() {
+     tuple1[0]="Clicked"
+  }
+
 </script>
 
 <style lang="scss">
@@ -20,4 +26,7 @@
   }
 </style>
 
-<h1>{a} + {b} + {c}</h1>
+<button on:click="{click1}">click</button>
+
+<h1>{tuple1[0]} + {tuple1[1]} + {tuple1[2]}</h1>
+
