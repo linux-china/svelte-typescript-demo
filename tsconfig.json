@@ -1,8 +1,14 @@
 {
   "compilerOptions": {
     "target": "es6",
+    "lib": [
+      "ES2019",
+      "DOM"
+    ],
     "baseUrl": "./",
-    "types": ["@pyoner/svelte-types"]
+    "types": [
+      "@pyoner/svelte-types"
+    ]
   },
   "include": [
     "src/**/*"
